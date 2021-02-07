@@ -18,11 +18,11 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Menu</h3>
+                <h3><i class="fas fa-align-left"></i></h3>
             </div>
     
             <ul class="list-unstyled components">
-                <p>Que isso</p>
+                <p>Menu</p>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -72,11 +72,22 @@
                         <i class="fas fa-align-left"></i>
                         <span>Menu</span>
                     </button>
+
+                    <div class="fl-right">
+                        <a onclick="alert('notificações')" style="cursor: pointer;"><i class="fa fas fa-bell"></i></a>
+                    </div>
         
                 </div>
             </nav>
 
-            <div class="container-fluid">
+            <div class="jumbotron pl-5">
+                <h1 class="display-4">Reta veiculos</h1>
+                <p class="lead">Sistema de gestão reta veiculos</p>
+                <hr class="my-4">
+            </div>
+
+            <div class="container-fluid pl-5">
+                
                 <div class="row">
                     <div class="col">
                         <div class="card">
@@ -84,10 +95,24 @@
                                 <h2><i class="fa fas fa-car"></i>  Carros</h2>
                             </div>
                             <div class="card-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore quas vel velit cumque. Aperiam deserunt rem laudantium, fugit, debitis perferendis minima repellat ipsum quas inventore illo tempore at expedita!</p>
+                                <p>
+                                    Esse modulo possibilita manipular todas as informações relacionadas aos carros.
+                                </p>
+                                <div class="card">
+                                    <div class="card-header">
+                                        Ultimo carro registrado
+                                    </div>
+                                    <div class="card-body">
+                                        Modelo: <BR />
+                                        Cor: <BR />
+                                        Valor Compra: <BR />
+                                        Valor Venda: <BR />
+                                        Lucro possivel: <BR />
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-footer">
-                                <button class="btn btn-info btn-block"><i class="fa fas fa-search"></i> Pesquisar</button>
+                                <button class="btn btn-info btn-block" onclick="pesquisarCarros()"><i class="fa fas fa-search"></i> Pesquisar</button>
                                 <button class="btn btn-success btn-block"><i class="fa fas fa-plus"></i> Novo</button>
                             </div>
                         </div>
@@ -96,13 +121,14 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-header">
-                                <h2>Titulo</h2>
+                                <h2><i class="fa fas fa-home"></i>  Imovel</h2>
                             </div>
                             <div class="card-body">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore quas vel velit cumque. Aperiam deserunt rem laudantium, fugit, debitis perferendis minima repellat ipsum quas inventore illo tempore at expedita!</p>
                             </div>
                             <div class="card-footer">
-        
+                                <button class="btn btn-info btn-block" onclick="pesquisarCarros()"><i class="fa fas fa-search"></i> Pesquisar</button>
+                                <button class="btn btn-success btn-block"><i class="fa fas fa-plus"></i> Novo</button>
                             </div>
                         </div>
                     </div>
@@ -114,13 +140,14 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-header">
-                                <h2>Titulo</h2>
+                                <h2><i class="fa fas fa-chart-bar"></i>  Ultimas vendas</h2>
                             </div>
                             <div class="card-body">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore quas vel velit cumque. Aperiam deserunt rem laudantium, fugit, debitis perferendis minima repellat ipsum quas inventore illo tempore at expedita!</p>
                             </div>
                             <div class="card-footer">
-        
+                                <button class="btn btn-info btn-block" onclick="pesquisarCarros()"><i class="fa fas fa-search"></i> Pesquisar</button>
+                                <button class="btn btn-success btn-block"><i class="fa fas fa-plus"></i> Novo</button>
                             </div>
                         </div>
                     </div>
@@ -128,13 +155,14 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-header">
-                                <h2>Titulo</h2>
+                                <h2><i class="fa fas fa-user"></i>  Usuários</h2>
                             </div>
                             <div class="card-body">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore quas vel velit cumque. Aperiam deserunt rem laudantium, fugit, debitis perferendis minima repellat ipsum quas inventore illo tempore at expedita!</p>
                             </div>
                             <div class="card-footer">
-        
+                                <button class="btn btn-info btn-block" onclick="pesquisarCarros()"><i class="fa fas fa-search"></i> Pesquisar</button>
+                                <button class="btn btn-success btn-block"><i class="fa fas fa-plus"></i> Novo</button>
                             </div>
                         </div>
                     </div>
@@ -160,23 +188,3 @@
 
 </body>
 </html>
-
-<script>
-    $(document).ready(function () {
-
-        if(localStorage.getItem('sidebar') == "true"){
-            $('#sidebar').toggleClass('active');
-        }
-
-        $('#sidebarCollapse').on('click', function () {
-            if(localStorage.getItem('sidebar') === "true"){
-                localStorage.setItem("sidebar", false)
-            }else{
-                localStorage.setItem("sidebar", true)
-            }
-            
-            $('#sidebar').toggleClass('active');
-        });
-
-    });
-</script>
